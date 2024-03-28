@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Lilita+One&family=Roboto&family=Workbench&display=swap');
+
 :root {
   --dark: #374151;
   --darker: #1f2937;
@@ -11,33 +15,44 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Fira sans", sans-serif;
+  
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--dark);
   color: #fff;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 header {
   padding: 2rem 1rem;
   max-width: 800px;
   width: 100%;
+  
+  font-family: "Workbench", sans-serif;
   margin: 0 auto;
 }
 
 header h1 {
   font-size: 2.5rem;
   font-weight: 300;
+  font-size: 50px;
   color: var(--gray);
   margin-bottom: 1rem;
+
 }
+
+
 
 #new-task-form {
   display: flex;
+
+}
+
+#new-task-form input{
+  font-family: "Lilita One", sans-serif;
 }
 
 input,
@@ -50,12 +65,13 @@ button {
 
 #new-task-input {
   flex: 1 1 0%;
-  background-color: var(--darker);
+  background-color: #fea49f;
   padding: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
-  color: var(--light);
+  color: #374151;
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 #new-task-input::placeholder {
@@ -66,7 +82,7 @@ button {
   color: var(--pink);
   font-size: 1.25rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
@@ -90,19 +106,21 @@ main {
 
 .task-list {
   padding: 1rem;
+  font-family: "Edu NSW ACT Foundation", sans-serif;
 }
 
 .task-list h2 {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: bold;
   color: var(--gray);
+  font-size: 40px;
   margin-bottom: 1rem;
 }
 
 #tasks .task {
   display: flex;
   justify-content: space-between;
-  background-color: var(--darkest);
+  background-color:#36454f;
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -116,12 +134,15 @@ main {
   color: var(--light);
   font-size: 1.25rem;
   width: 100%;
+  font-family: "Edu NSW ACT Foundation", sans-serif;
+  font-weight: bold;
   display: block;
   transition: 0.4s;
 }
 
 #tasks .task .content .text:not(:read-only) {
-  color: var(--pink);
+  color: #DFFF00;
+  font-weight: bold;
 }
 
 #tasks .task .actions{
@@ -133,6 +154,7 @@ main {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 1.125rem;
+  font-family: "Lilita One", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.4s;
@@ -147,11 +169,11 @@ main {
 }
 
 .task .actions .edit{
-  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .task .actions .delete{
-  color: crimson;
+  color:#f1807e;
 }
